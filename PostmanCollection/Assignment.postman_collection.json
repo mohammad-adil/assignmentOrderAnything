@@ -1,0 +1,308 @@
+{
+	"info": {
+		"_postman_id": "49969750-3e22-4197-bfbd-9a27d315932f",
+		"name": "Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"shah\",\r\n    \"phone_number\":\"799049335\",\r\n    \"password\":\"shah@shah123\",\r\n    \"user_type\":\"DELIVERY PERSON\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone_number\": 799049335,\r\n    \"password\": \"shah@shah123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getItems",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getcart",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOjc5OTQ0OTMzNSwiX2lkIjoiNjBkYWE5ZDVlNGYxNTgyNmQ4MTk5ODMwIiwibmFtZSI6InNoYWgiLCJpYXQiOjE2MjQ5NDkxNDZ9.MPdKJ-q9fiGbKSDuWhWLQjEG0lzliKW8fiHTXmYuhAo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/getcart",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getcart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatecart",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOjc5OTQ0OTMzNSwiX2lkIjoiNjBkYWE5ZDVlNGYxNTgyNmQ4MTk5ODMwIiwibmFtZSI6InNoYWgiLCJpYXQiOjE2MjQ5NzE0MzJ9.uEeuI8oZ9vFFhP48WMmpW_6cx89TsYYDKILnpVs9XF0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_id\": \"60dad70a0661bb108cf8d06e\",\r\n    \"quantity\": 27\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/updatecart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"updatecart"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addItems",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/additems",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"additems"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "allorder",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOjc5OTQ0OTMzNSwiX2lkIjoiNjBkYWE5ZDVlNGYxNTgyNmQ4MTk5ODMwIiwibmFtZSI6InNoYWgiLCJpYXQiOjE2MjUwMzU0MjJ9.w52MizpKMQH-nHx7tNfji9W-zPTtl9jE725C8F9JELA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/allorders",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"allorders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOjc5OTQ0OTMzNSwiX2lkIjoiNjBkYWE5ZDVlNGYxNTgyNmQ4MTk5ODMwIiwibmFtZSI6InNoYWgiLCJpYXQiOjE2MjQ5NzE0MzJ9.uEeuI8oZ9vFFhP48WMmpW_6cx89TsYYDKILnpVs9XF0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/order",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deliveryperson",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOjc5OTQ0OTMzNSwiX2lkIjoiNjBkYWE5ZDVlNGYxNTgyNmQ4MTk5ODMwIiwibmFtZSI6InNoYWgiLCJpYXQiOjE2MjUwMzU0MjJ9.w52MizpKMQH-nHx7tNfji9W-zPTtl9jE725C8F9JELA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/deliveryperson",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"deliveryperson"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "assignDeliveryPerson",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOjc5OTA0OTMzNSwiX2lkIjoiNjBkYzEzOTRkNTgzOWI1MjYwNDJhOWUyIiwibmFtZSI6InNoYWgiLCJpYXQiOjE2MjUwNDIyMjF9.LmJpCMpPqOEbmseW7xOD1v9PQrrp9Fdos-_uhtxnp3o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"60dc1394d5839b526042a9e2\",\r\n    \"order_id\":\"60db2459ec3a664a2cb419eb\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/order/update",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"order",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deliveryPerson",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOjc5OTA0OTMzNSwiX2lkIjoiNjBkYzEzOTRkNTgzOWI1MjYwNDJhOWUyIiwibmFtZSI6InNoYWgiLCJpYXQiOjE2MjUwNDIzOTB9.hQNzv7uIZXAYmr_oizKh6baDcZQHRRxCb_3H0MjJkok",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\":\"REACHED STORE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/delivery/order/update",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"delivery",
+						"order",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
