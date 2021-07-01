@@ -19,14 +19,14 @@ router.patch('/updatecart', controller.updateCart)
 
 
 // ADMIN ROUTES
-router.get('/allorders', controller.admin.getAllOrders)//working
+router.get('/allorders', controller.admin.getAllOrders)
 
-router.get('/deliveryperson', controller.admin.getAllDeliveryPerson)//working
+router.get('/deliveryperson', controller.admin.getAllDeliveryPerson)
 
-router.patch('/order/update', controller.admin.assignDeliveryPersonToOrder) // working
+router.patch('/order/update', controller.admin.assignDeliveryPersonToOrder)
 
 
 // DELIVERY PERSON ROUTES
-router.patch('/delivery/order/update', controller.deliveryPerson)//working 
+router.patch('/delivery/order/update', controller.deliveryPerson)
 
 module.exports = router
